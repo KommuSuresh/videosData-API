@@ -2,7 +2,7 @@ const express = require("express");
 const videos = require("../VideosData.json");
 const app = express();
 
-app.get("/", (req, res) => {
+app.get("/videos/all", (req, res) => {
   const title = req.query.search;
   if (!title) {
     // If no search query is provided, send back all videos
